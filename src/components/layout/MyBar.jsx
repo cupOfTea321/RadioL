@@ -3,6 +3,7 @@ import {Box, Container, IconButton, Menu, MenuItem, Typography} from "@mui/mater
 
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../assets/logo.svg'
+import MainBtn from "../ui/MainBtn.jsx";
 const options = [
     {name: 'Программа', path: '/'},
     {name: 'Описание', path: '/'},
@@ -80,15 +81,7 @@ const MyBar = () => {
                 ))}
             </Box>
             <Box sx={{width: '30%', textAlign: 'right'}}>
-                <Box component={'button'} sx={{
-                    padding: '22px',
-                    borderRadius: '50px',
-                    background: 'var(--red)',
-                    color: 'white',
-                    display: {md: 'inline-block', sm: 'none', xs: 'none'}
-                }}>
-                    РЕГИСТРАЦИЯ
-                </Box>
+                <MainBtn/>
             </Box>
 
             {/* МОБИЛЬНАЯ ВЕРСИЯ*/}
@@ -145,7 +138,7 @@ const MyBar = () => {
                             color: 'white',
                             marginLeft: '10px'
                         }}>
-                        РЕГИСТРАЦИЯ
+                        Регистрация
                         </MenuItem>
                     </Box>
 

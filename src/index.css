@@ -9,17 +9,18 @@
   font-family: 'Inner', sans-serif !important;
 
 }
-/*.MuiButtonBase-root .MuiMenuItem-root{*/
-/*  background: #C10630;*/
+/*.MuiContainer-root{*/
+/*  padding-left: 0 !important;*/
+/*  padding-right: 0 !important;*/
 /*}*/
-/*.MuiButtonBase-root{*/
-/*  background: #C10630;*/
-/*}*/
+.css-14buhgn-MuiContainer-root {
+
+}
 #root{
   --main: white;
   --main-black: #353535;
   --red: #C10630;
-  --blue: #004077;
+  --blue: #004077 !important;
 
 }
 html {
