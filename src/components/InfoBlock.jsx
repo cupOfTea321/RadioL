@@ -9,7 +9,7 @@ const InfoBlock = () => {
                 background: '#004077',
                 color: 'white',
                 padding: {sm: '72px 108px', xs: '24px 36px'},
-                fontSize: {sm: '32px', xs: '20px'},
+                fontSize: {sm: '32px', xs: '18px'},
                 borderRadius: '40px',
                 marginTop: {md: '140px', sm: '80px', xs: '40px'},
 

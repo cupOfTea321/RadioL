@@ -11,6 +11,7 @@ const MainBtn = ({sx, title = 'Регистрация'}) => {
             color: 'white',
             display: {md: 'inline-block', sm: 'none', xs: 'none'},
             fontWeight: 700,
+            cursor: 'pointer',
             ...sx
         }}>
             {title}

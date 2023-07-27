@@ -36,6 +36,11 @@ const MyBar = () => {
     return (
         <Box sx={{
             background: 'var(--main-black)',
+            position: 'fixed',
+            top: 0,
+            right: 0,
+            left: 0,
+            zIndex: 100
         }}>
         <Container maxWidth={'lg'} sx={{
             display: 'flex',
@@ -43,8 +48,8 @@ const MyBar = () => {
 
             justifyContent: 'space-between',
             alignItems: 'center',
-            paddingTop: '30px',
-            paddingBottom: '22px',
+            paddingTop: {sm: '30px', xs: '15px'},
+            paddingBottom: {sm: '22px', xs: '11px'},
         }}>
 
             <Typography sx={{

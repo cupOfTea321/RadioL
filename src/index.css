@@ -16,6 +16,9 @@
 .css-14buhgn-MuiContainer-root {
 
 }
+.MuiPaper-root{
+  border-radius: 15px !important;
+}
 #root{
   --main: white;
   --main-black: #353535;

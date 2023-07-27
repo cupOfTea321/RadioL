@@ -1,22 +1,33 @@
 import MyBar from "./components/layout/MyBar.jsx";
-import {Container} from "@mui/material";
+import {Box, Container, Typography} from "@mui/material";
 import './index.css'
 import MainBanner from "./components/MainBanner.jsx";
 import InfoBlock from "./components/InfoBlock.jsx";
-
+import icon1 from './assets/коммуникации.png'
+import icon2 from './assets/рост.png'
+import icon3 from './assets/обсуждения.png'
+import IconsBlock from "./components/IconsBlock.jsx";
+import MySwapper from "./components/MySwapper.jsx";
+import ImageBlock from "./components/ImageBlock.jsx";
 function App() {
 
   return (
     <>
         <MyBar/>
         <Container sx={{
-            marginTop: {md: '140px', sm: '80px', xs: '40px'},
+            marginTop: {md: '220px', sm: '200px', xs: '160px'},
 
         }}>
             <MainBanner/>
-
             <InfoBlock/>
-
+            <IconsBlock/>
+            <ImageBlock/>
+            <ImageBlock
+                id={2}
+                title={'Профориентационный трек'}
+                text={'Самый масштабный трек фестиваля, который будет особенно\n' +
+                    'интересен студентам и будущим абитуриентам.'}
+            />
         </Container>
 
 

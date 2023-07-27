@@ -21,7 +21,8 @@ const MainBanner = () => {
                 color: 'var(--red)',
                 fontWeight: 700,
                 width: {md:'23%', sm: '33%', xs: '100%'},
-                textAlign: 'center'
+                textAlign: 'center',
+                lineHeight: '57px'
             }}>
                 23-24
                 ноября
