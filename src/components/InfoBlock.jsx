@@ -1,15 +1,15 @@
 import React from 'react';
 import {Box, Typography} from "@mui/material";
 import MainBtn from "./ui/MainBtn.jsx";
+import {blueBtnCSS} from "../mui/theme.js";
 
 const InfoBlock = () => {
     return (
         <>
-            <Typography sx={{
+            <Typography variant={'h3'} sx={{
                 background: '#004077',
                 color: 'white',
                 padding: {sm: '72px 108px', xs: '24px 36px'},
-                fontSize: {sm: '32px', xs: '18px'},
                 borderRadius: '40px',
                 marginTop: {md: '140px', sm: '80px', xs: '40px'},
 
@@ -21,7 +21,7 @@ const InfoBlock = () => {
                 display: 'flex',
                 justifyContent: 'space-between',
                 flexDirection: {md: 'row', sm: 'column', xs: 'column'},
-                width: {md: '100%', sm: '50%', xs: '50%'},
+                width: {md: '100%', sm: '50%', xs: '60%'},
                 margin: '0 auto'
             }}>
                 <MainBtn sx={{
@@ -31,17 +31,7 @@ const InfoBlock = () => {
                     justifyContent: 'center',
                     marginTop: {md: '36px', sm: '20px', xs: '20px'},
                 }}/>
-                <MainBtn sx={{
-                    fontSize: {sm: '40px', xs: '20px'},
-                    background: 'white',
-                    color: 'var(--blue)',
-                    border: '2px solid var(--blue)',
-                    fontWeight: 400,
-                    padding: {lg: '23px 145px', md: '23px 80px', sm: '23px 80px', xs: '23px 80px'},
-                    display: 'flex',
-                    justifyContent: 'center',
-                    marginTop: {md: '36px', sm: '20px', xs: '20px'},
-                }} title={'Программа'}/>
+                <MainBtn sx={blueBtnCSS} title={'Программа'}/>
             </Box>
         </>
     );

@@ -45,15 +45,10 @@ const NewsCard = ({news}) => {
                         right: {sm: '12px', xs: 'auto'},
                         left: {sm: 'auto', xs: '12px'}
                     }} title={button[1]}/>}
-                    <Typography gutterBottom variant="h4" sx={{
-                        fontWeight: 700,
-                        fontSize: {sm: '32px', xs: '24px'},
-                    }}>
+                    <Typography gutterBottom variant="cardTitle">
                         {title}
                     </Typography>
-                    <Typography variant="h5" color="text.secondary" sx={{
-                        fontSize: {sm: '24px', xs: '16px'},
-                    }}>
+                    <Typography variant="h5" color="text.secondary" >
                         {text}
                     </Typography>
                 </CardContent>

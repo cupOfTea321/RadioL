@@ -22,7 +22,7 @@ import slide12 from '../assets/slide12.png'
 import slide13 from '../assets/slide13.png'
 import news1 from '../assets/news1.png'
 import news2 from '../assets/news2.png'
-import {Box} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import NewsCard from "./NewsCard.jsx";
 const MySwapper = ({id}) => {
     const images = [
@@ -84,29 +84,41 @@ const MySwapper = ({id}) => {
             text: 'На фестивале пройдет научно-спортивный конкурс “ГТО в радиоэлектронике”'
         },
     ]
+    const history = [
+        {
+            text: 'Такие площадки были очень интересные как для студентов, так и для организаторов. Особенно хочу отметить выступления гостей Фестиваля на его открытии. Это были философские, ёмкие, душевные и очень мотивирующие к действию и осмыслениювыступления.',
+            author: 'Елена Юрьевна Арапова',
+            ps: 'руководитель инжинирингового центра НТЦ УП РАН (Москва)'
+        },
+        {
+            text: 'Меня приятно удивил размах мероприятия, количество и качество участников! Были проведены очень интересные "круглые столы". Понравилось, что и другие вузы приняли активное участие в Фестивале. Конечно, же, огромное спасибо организаторам за чёткую работу!',
+            author: 'Алексей Александрович Комаров',
+            ps: 'зав. кафедрой Радиотехнических приборов и антенных систем НИУ «МЭИ» (Москва)'
+        },
+        {
+            text: 'Польза прежде всего заключается в опыте работы с различными предприятиями и организации взаимодействия с участниками на фестивале. Думаю, что продумывание потоков студентов и систематизация их вовлеченности довольно нужная мне деятельность, которая пригодится в будущем.',
+            author: 'Ксения Михайловна Набатова',
+            ps: 'сотрудник кафедры Радиотехнических систем НИУ «МЭИ» (Москва), Организатор Профориентационного трека'
+        },
+        {
+            text: 'Как участнику фестиваля радиоэлектроники хотелось бы выразить благодарность организаторам за их работу. Особенно за удобные временные рамки и грамотную техническую организацию.',
+            author: 'Павел Чернов',
+            ps: 'студент группы БРС-211, ТГТУ (Тамбов)'
+        },
+    ]
     const boxRef = useRef(null)
     return (
         <Box
             sx={{
-                // height: '400px',
-                // padding: '10px',
-                // border: '1px solid black',
-                // display: 'flex',
-                // width: '100%',
                 overflowX: 'hidden',
                 cursor: 'grab'
             }}
 
             ref={boxRef}
-            // drag='x'
-            // dragConstraints={boxRef}
         >
             <motion.div
                 style={{
-                    // width: '100%',
-                    // height: {sm: '360px', xs: '230px'},
                     padding: '10px',
-                    // border: '1px solid black',
                     display: 'inline-flex',
                     gap: '20px',
                 }}
@@ -152,20 +164,42 @@ const MySwapper = ({id}) => {
                     <motion.div style={{
                         alignSelf: 'stretch'
                     }}>
-                        {/*<Box*/}
-                        {/*    drag='x'*/}
-                        {/*    dragConstraints={boxRef}*/}
-                        {/*    component={'img'}*/}
-                        {/*    src={item}*/}
-                        {/*    key={item}*/}
-                        {/*    sx={{*/}
-                        {/*        width: {sm: '500px', xs: '320px'},*/}
-                        {/*        height: {sm: '360px', xs: '230px'},*/}
-                        {/*        borderRadius: '15px',*/}
-                        {/*        pointerEvents: 'none'*/}
-                        {/*    }}*/}
-                        {/*/>*/}
                         <NewsCard news={item}/>
+                    </motion.div>
+                ))}
+                {id === 4 && history.map(item => (
+                    <motion.div style={{
+
+                    }}>
+                        <Box sx={{
+                            background: '#004077',
+                            color: 'white',
+                            borderRadius: '10px',
+                            width: {md: '800px', sm: '600px', xs: '300px'},
+                            padding: {sm: '36px 30px', xs: '20px 10px'},
+                            height: '350px',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'space-between',
+                        }}>
+                            <Typography variant={'h5'} sx={{fontWeight: 400}}>
+                                {item.text}
+                            </Typography>
+                            <Box>
+                                <Typography variant={'h5'} sx={
+                                    {marginTop: '36px',
+                                        marginBottom: '10px',
+                                        fontWeight: 700
+                                    }}>
+                                    {item.author}
+                                </Typography>
+                                <Typography variant={'h5'}>
+                                    {item.ps}
+                                </Typography>
+                            </Box>
+
+                        </Box>
+
                     </motion.div>
                 ))}
             </motion.div>

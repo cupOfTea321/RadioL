@@ -9,8 +9,10 @@ import icon3 from './assets/обсуждения.png'
 import IconsBlock from "./components/IconsBlock.jsx";
 import MySwapper from "./components/MySwapper.jsx";
 import ImageBlock from "./components/ImageBlock.jsx";
-import {theme} from "./mui/theme.js";
+import {blueBtnCSS, theme} from "./mui/theme.js";
 import React from "react";
+import MainBtn from "./components/ui/MainBtn.jsx";
+import NewsBlock from "./components/NewsBlock.jsx";
 
 function App() {
 
@@ -36,14 +38,8 @@ function App() {
                 title={'Конкурсный трек'}
                 text={'В этом треке будут организованы инженерные конкурсы для школьников, студентов и молодых специалистов.'}
             />
-            <Typography component={'h2'} variant={'h2'} sx={{
-                fontSize: {sm: '40px', xs: '32px'},
-                fontWeight: 700,
-                color: '#004077',
+            <NewsBlock/>
 
-            }}>
-                Как это было?
-            </Typography>
         </Container>
 
 

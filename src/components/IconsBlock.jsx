@@ -15,7 +15,7 @@ const IconsBlock = () => {
         justifyContent: 'center',
     }
     const iconTextCSS = {
-        fontSize: {md: '32px', sm: '20px', xs: '12px'},
+
         color: '#004077',
         fontWeight: 700,
         textAlign: 'center',
@@ -31,7 +31,7 @@ const IconsBlock = () => {
         }}>
             <Box sx={iconBlockCSS}>
                 <Box component={'img'} src={icon1} sx={iconCSS}/>
-                <Typography sx={iconTextCSS}>
+                <Typography variant={'h4'} sx={iconTextCSS}>
                     Универсальная
                     площадка
                     коммуникации
@@ -39,7 +39,7 @@ const IconsBlock = () => {
             </Box>
             <Box sx={iconBlockCSS}>
                 <Box component={'img'} src={icon2} sx={iconCSS}/>
-                <Typography sx={iconTextCSS}>
+                <Typography variant={'h4'} sx={iconTextCSS}>
                     Развитие
                     фестивального
                     движения
@@ -47,7 +47,7 @@ const IconsBlock = () => {
             </Box>
             <Box sx={iconBlockCSS}>
                 <Box component={'img'} src={icon3} sx={iconCSS}/>
-                <Typography sx={iconTextCSS}>
+                <Typography variant={'h4'} sx={iconTextCSS}>
                     Важные
                     темы для
                     обсуждения
