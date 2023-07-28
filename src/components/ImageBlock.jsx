@@ -7,16 +7,13 @@ const ImageBlock = ({id = 1, title = 'Отраслевой трек', text = 'В
         <Box sx={{
             marginTop: {md: '140px', sm: '80px', xs: '40px'},
         }}>
-            <Typography component={'h2'} sx={{
-                fontSize: {sm: '40px', xs: '32px'},
-                fontWeight: 700,
+            <Typography component={'h2'} variant={'h2'} sx={{
                 color: '#004077',
 
             }}>
                 {title}
             </Typography>
-            <Typography component={'h3'} sx={{
-                fontSize: {sm: '32px', xs: '20px'},
+            <Typography component={'h3'} variant={'h3'} sx={{
                 marginBottom: {sm: '36px', xs: '20px'},
                 marginTop: {sm: '36px', xs: '20px'},
                 color: '#004077',

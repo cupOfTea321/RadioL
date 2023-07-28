@@ -40,7 +40,9 @@ const MyBar = () => {
             top: 0,
             right: 0,
             left: 0,
-            zIndex: 100
+            zIndex: 100,
+            boxShadow: '0 2px 2px rgba(0, 0, 0, 0.1)',
+            // boxShadow: '0 2px 4px rgba(0, 0, 0, 0.08)',
         }}>
         <Container maxWidth={'lg'} sx={{
             display: 'flex',

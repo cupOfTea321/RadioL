@@ -1,5 +1,5 @@
 import MyBar from "./components/layout/MyBar.jsx";
-import {Box, Container, Typography} from "@mui/material";
+import {Box, Container, ThemeProvider, Typography} from "@mui/material";
 import './index.css'
 import MainBanner from "./components/MainBanner.jsx";
 import InfoBlock from "./components/InfoBlock.jsx";
@@ -9,10 +9,13 @@ import icon3 from './assets/обсуждения.png'
 import IconsBlock from "./components/IconsBlock.jsx";
 import MySwapper from "./components/MySwapper.jsx";
 import ImageBlock from "./components/ImageBlock.jsx";
+import {theme} from "./mui/theme.js";
+import React from "react";
+
 function App() {
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
         <MyBar/>
         <Container sx={{
             marginTop: {md: '220px', sm: '200px', xs: '160px'},
@@ -28,10 +31,23 @@ function App() {
                 text={'Самый масштабный трек фестиваля, который будет особенно\n' +
                     'интересен студентам и будущим абитуриентам.'}
             />
+            <ImageBlock
+                id={3}
+                title={'Конкурсный трек'}
+                text={'В этом треке будут организованы инженерные конкурсы для школьников, студентов и молодых специалистов.'}
+            />
+            <Typography component={'h2'} variant={'h2'} sx={{
+                fontSize: {sm: '40px', xs: '32px'},
+                fontWeight: 700,
+                color: '#004077',
+
+            }}>
+                Как это было?
+            </Typography>
         </Container>
 
 
-    </>
+    </ThemeProvider>
   )
 }
 
